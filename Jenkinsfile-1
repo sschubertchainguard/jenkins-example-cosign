@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     GITHUB_TOKEN=credentials('github-token')
-    IMAGE_NAME='darinpope/jenkins-example-cosign'
+    IMAGE_NAME='sschubertchainguard/jenkins-example-cosign'
     IMAGE_VERSION='8.5-204'
   }
   stages {
