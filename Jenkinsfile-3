@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    IMAGE_NAME='darinpope/jenkins-example-cosign'
+    IMAGE_NAME='sschubertchainguard/jenkins-example-cosign'
     IMAGE_VERSION='8.5-204'
     COSIGN_PUBLIC_KEY=credentials('cosign-public-key')
   }
