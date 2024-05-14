@@ -36,6 +36,7 @@ pipeline {
     stage('sign the container image') {
       steps {
         sh 'cosign version'
+        sh 'export COSIGN_PASSWORD=$COSIGN_PASSWORD'
         sh 'cosign sign --key $COSIGN_PRIVATE_KEY ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
       }
     }
