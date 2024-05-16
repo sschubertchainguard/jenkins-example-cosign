@@ -37,7 +37,7 @@ pipeline {
       steps {
         sh 'cosign version'
         sh 'echo $COSIGN_PASSWORD'
-        sh 'cosign sign --key $COSIGN_PRIVATE_KEY ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
+        sh 'cosign sign --key $COSIGN_PRIVATE_KEY -y ghcr.io/$IMAGE_NAME:$IMAGE_VERSION'
       }
     }
   }
